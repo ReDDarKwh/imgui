@@ -4,8 +4,8 @@ add_library(imgui STATIC
     # the GUI to GLFW andWebGPU:
     backends/imgui_impl_wgpu.h
     backends/imgui_impl_wgpu.cpp
-    backends/imgui_impl_glfw.h
-    backends/imgui_impl_glfw.cpp
+    backends/imgui_impl_sdl3.h
+    backends/imgui_impl_sdl3.cpp
 
     # The core ImGui files
     imconfig.h
@@ -21,4 +21,4 @@ add_library(imgui STATIC
 )
 
 target_include_directories(imgui PUBLIC .)
-target_link_libraries(imgui PUBLIC webgpu glfw)
+target_link_libraries(imgui PUBLIC webgpu SDL3::SDL3)
